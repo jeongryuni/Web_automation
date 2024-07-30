@@ -1,4 +1,15 @@
-import main
+'''
+실습 설명
+티비랭킹닷컴 사이트에서 처음 3년(2010~2012)간의 데이터를 가져와 주세요.
+
+웹사이트 주소의 구조를 활용해서, 모든 페이지의 HTML 코드를 rating_pages에 저장해 주세요.
+
+2010년 1월부터 2012년 12월까지 모든 달에 대해, 1주차~5주차 페이지를 순서대로 리스트에 넣어주시면 됩니다.
+
+이전 레슨에서 봤듯이, 5주차가 없는 달은 데이터가 없는 페이지가 나오는데요. 그런 페이지들도 리스트에 넣어주세요.
+
+'''
+
 import requests
 
 response = requests.get("https://google.com")
@@ -7,19 +18,7 @@ response = requests.get("https://google.com")
 
 #https://workey.codeit.kr/ratings/index?year=2010&month=1&weekIndex=0
 #
-# rating_pages=[]
-# for i in range(5):
-#     url = "https://workey.codeit.kr/ratings/index?year=2010&month=1&weekIndex={}".format(i)
-#     print(url)
-#     response = requests.get(url)
-#     rating_page = response.text
-#     rating_pages.append(rating_page)
-# print(len(rating_pages))
-# print(rating_pages[0])
 
-
-
-import main
 
 rating_pages = []
 for i in range(2010, 2013):
